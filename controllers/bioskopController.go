@@ -27,7 +27,7 @@ func CreateBioskop(c *gin.Context) {
 }
 
 func GetBioskops(c *gin.Context) {
-	var bioskops models.Bioskop
+	var bioskops []models.Bioskop
 
 	config.DB.Find(&bioskops)
 	c.JSON(http.StatusOK, gin.H{
