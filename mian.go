@@ -19,11 +19,11 @@ func main() {
 
 	server := gin.Default()
 
-	server.POST("/movies", controllers.CreateBioskop)
-	server.GET("/movies", controllers.GetBioskops)
-	server.GET("/movies/:id", controllers.GetBioskopById)
-	server.PUT("/movies/:id", controllers.UpdateBioskop)
-	server.DELETE("/movies/:id", controllers.DeleteEvent)
+	server.POST("/bioskop", controllers.CreateBioskop)
+	server.GET("/bioskop", controllers.GetBioskops)
+	server.GET("/bioskop/:id", controllers.GetBioskopById)
+	server.PUT("/bioskop/:id", controllers.UpdateBioskop)
+	server.DELETE("/bioskop/:id", controllers.DeleteEvent)
 
 	server.Run(":8080")
 }
