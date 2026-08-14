@@ -31,7 +31,7 @@ func GetBioskops(c *gin.Context) {
 
 	config.DB.Find(&bioskops)
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Data menampilkan semua data bioskop",
+		"message": "Berhasi menampilkan semua data bioskop",
 		"bioskop": bioskops,
 	})
 }
@@ -77,7 +77,7 @@ func UpdateBioskop(c *gin.Context) {
 
 	config.DB.Model(&bioskop).Updates(input)
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Data berhsil di update",
+		"message": "Data berhasil di update",
 		"bioskop": bioskop,
 	})
 }
